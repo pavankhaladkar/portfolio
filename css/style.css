@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  position: absolute;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  background: url(../image/bg1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  transition: all .5s;
+}
+
+.logo {
+  float: right;
+  margin-right: 5%;
+  margin-top: 1%;
+  color: white;
+  font-size: 300%;
+  font-weight: bold;
+  }
+/* about me*/
+.aboutme{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0;
+  background-color: #dff6f0;
+  color: #400082;
+  line-height: 2;
+}
+.profile-photo{
+  height: 250px;
+  width: 300px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 30%;
+}
+
+h2{
+  font-weight: bold;
+}
+p{
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Skill */
+.skill-container{
+  background: #000000;
+  margin: 0;
+}
+.skill{
+  background-color: #000000;
+  color: white;
+
+}
+
+.skill li{
+  margin: 20px 20px;
+}
+
+.bar{
+  background: #353b48;
+  display: block;
+  height: 5px;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span{
+  height: 5px;
+  float: left;
+  background:#2187e7;
+}
+
+.c{
+  width: 90%;
+animation: c 2s;
+}
+
+.cpp{
+  width: 90%;
+animation: cpp 2s;
+}
+
+.java{
+  width: 70%;
+animation: java 2s;
+}
+.kotlin{
+  width: 75%;
+  animation: kotlin 2s;
+}
+
+.android-studio{
+  width: 50%;
+  animation: android-studio 2s;
+
+}
+
+.html{
+  width: 75%;
+  animation: html 2s;
+
+}
+
+.css{
+  width: 60%;
+  animation: css 2s;
+
+}
+
+@keyframes c {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%;
+  }
+}
+
+@keyframes cpp {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%;
+  }
+}
+
+@keyframes java {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
+@keyframes kotlin {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 75%;
+  }
+}
+
+@keyframes android-studio {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+}
+
+@keyframes html {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 75%;
+  }
+}
+
+@keyframes css {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 60%;
+  }
+}
+
+/* projct */
+.projects{
+  text-align: center;
+  background: #120136;
+  line-height: 2;
+}
+
+hr{
+  margin: 10px 25%;
+  width: 50%;
+}
+
+.tprojct-image{
+  width: 225px;
+}
+h4{
+  color: #ffe8df;
+  line-height: 2;
+}
+
+/*contact*/
+
+.conyact-container{
+  background: url('../image/contact bg.png');
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+.card{
+  background: #2f3542;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-icon{
+  font-size: 28px;
+  background: #ff6348;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+  background: none;
+  color: #ff6348;
+  transform: scale(1.6);
+}
+
+.card p{
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:800px) {
+  .contact-info{
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
+
+.send-container{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,150,0.5),rgba(0,0,50,0.5)),url(../image/message-bg.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  font-family: sans-serif;
+}
+.Send-title{
+  margin-top: 100px;
+  color: #fff;
+  text-transform: uppercase;;
+  transition: all 4s ease-in-out;
+}
+
+.Send-title h1{
+  font-size: 200%;
+  line-height:4;
+}
+.Send-title h2{
+  font-size: 100%;
+  line-height: 6;
+}
+
+form{
+  margin-top:10px;
+  transition: all 4s ease-in-out;
+}
+.form-control{
+  width: 600px;
+  background: transparent;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input{
+  height: 45px;
+}
+form.submit{
+  background: #ff5722;
+  border-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 312.5%;
+  margin-top: 30px;
+}
+form .submit:hover{
+  text-align: center;
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+.bottom-container{
+  background-color: #66bfbf;
+}
+.bottom-conten{
+  margin-left: 40%;
+  padding: 20px 0 20px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
